@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+//styles
+import './sass/App.scss';
+
 //components
 import { Card } from './components/Card';
 
@@ -20,11 +23,11 @@ function App() {
 
   return (
     <div className="App">
-      Hello World
+      <h1>Posts Database:</h1>
       {
         posts && posts.map(post => {
           return <Card
-            key= {Date.now()*Math.random()}
+            key={Date.now() * Math.random()}
             post={post}
           />
         })
